@@ -43,6 +43,14 @@
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="google2ebcdb2a9bb4b3af">
 
+  <!-- Preconnect to Google Fonts for Fast Non-Blocking Loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+
+  <!-- Preload Critical LCP Hero Image -->
+  <link rel="preload" href="img/foto5.jpeg" as="image" type="image/jpeg" fetchpriority="high">
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -226,9 +234,9 @@
               </div>
             </div>
 
-            <!-- Main Hero Image -->
+            <!-- Main Hero Image (LCP Prioritized) -->
             <div class="hero-main-card">
-              <img src="img/foto5.jpeg" alt="Lini Produk Basreng S2 dengan Varian Rasa Lengkap" width="600" height="460">
+              <img src="img/foto5.jpeg" alt="Lini Produk Basreng S2 dengan Varian Rasa Lengkap" width="600" height="460" fetchpriority="high" decoding="async">
             </div>
 
             <!-- Floating Badge Bottom -->
@@ -987,7 +995,7 @@
     </button>
   </div>
 
-  <!-- JavaScript File -->
-  <script src="js/app.js"></script>
+  <!-- JavaScript File (Deferred for Zero Render-Blocking) -->
+  <script src="js/app.js" defer></script>
 </body>
 </html>

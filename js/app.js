@@ -79,17 +79,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // =============================================================================
-// 4. STICKY NAVBAR HANDLER
+// 4. STICKY NAVBAR HANDLER (Optimized with requestAnimationFrame - Zero Reflow)
 // =============================================================================
 function initStickyNavbar() {
   const header = document.querySelector(".site-header");
   if (!header) return;
 
+  let ticking = false;
   const handleScroll = () => {
-    if (window.scrollY > 30) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 30) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
   };
 
@@ -133,33 +140,34 @@ function initMobileMenu() {
 }
 
 // =============================================================================
-// 6. SMOOTH SCROLLING & ACTIVE SECTION HIGHLIGHT
+// 6. ACTIVE SECTION HIGHLIGHT (IntersectionObserver - Zero Forced Reflow)
 // =============================================================================
 function initSmoothScrollAndActiveNav() {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-link");
+  if (!sections.length || !navLinks.length) return;
 
-  function highlightNavOnScroll() {
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 140;
-      const sectionId = current.getAttribute("id");
-
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLinks.forEach(link => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === `#${sectionId}`) {
-            link.classList.add("active");
-          }
-        });
-      }
+  if ("IntersectionObserver" in window) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const currentId = entry.target.getAttribute("id");
+          navLinks.forEach(link => {
+            if (link.getAttribute("href") === `#${currentId}`) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+        }
+      });
+    }, {
+      rootMargin: "-25% 0px -65% 0px",
+      threshold: 0
     });
-  }
 
-  window.addEventListener("scroll", highlightNavOnScroll, { passive: true });
-  highlightNavOnScroll();
+    sections.forEach(section => sectionObserver.observe(section));
+  }
 }
 
 // =============================================================================

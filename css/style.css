@@ -3,8 +3,7 @@
    Modern, Clean, Fresh & Spicy UMKM Snack Aesthetics
    ========================================================================== */
 
-/* --- Google Fonts Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap');
+/* Google Fonts loaded via preconnected HTML links in index.html for zero render blocking */
 
 /* --- Root Variables & Theme System --- */
 :root {
