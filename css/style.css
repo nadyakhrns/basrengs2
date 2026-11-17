@@ -282,6 +282,17 @@ ul, ol {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
+.btn-instagram {
+  background: linear-gradient(135deg, #F58529 0%, #DD2A7B 50%, #8134AF 100%);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(221, 42, 123, 0.35);
+}
+
+.btn-instagram:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(221, 42, 123, 0.45);
+}
+
 .btn-sm {
   padding: 10px 20px;
   font-size: 0.9rem;
@@ -1410,8 +1421,8 @@ ul, ol {
    ========================================================================== */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
 .contact-card {
@@ -1457,6 +1468,11 @@ ul, ol {
 .contact-card.card-tiktok .contact-icon-wrapper {
   background: #F3F4F6;
   color: #111111;
+}
+
+.contact-card.card-ig .contact-icon-wrapper {
+  background: linear-gradient(135deg, rgba(245, 133, 41, 0.15) 0%, rgba(221, 42, 123, 0.15) 50%, rgba(129, 52, 175, 0.15) 100%);
+  color: #DD2A7B;
 }
 
 .contact-channel-title {
@@ -1840,6 +1856,10 @@ ul, ol {
   }
 
   .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
