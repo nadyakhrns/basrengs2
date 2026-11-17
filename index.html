@@ -3,17 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Basreng S2 - Camilan bakso goreng super renyah dan gurih dengan 5 pilihan varian rasa favorit: Pedas Daun Jeruk, Original Daun Jeruk, Pedas Gurih, Balado, dan Original. Tersedia ukuran 250gr, 500gr, & 1kg. Sekali coba, susah berhenti!">
+
+  <!-- Primary Meta Tags -->
+  <title>Basreng S2 | Camilan Bakso Goreng Renyah &amp; Gurih</title>
+  <meta name="title" content="Basreng S2 | Camilan Bakso Goreng Renyah &amp; Gurih">
+  <meta name="description" content="Camilan bakso goreng super renyah Basreng S2 dengan 5 varian rasa gurih &amp; pedas daun jeruk. Tersedia ukuran 250g, 500g, 1kg. Sekali coba susah berhenti!">
   <meta name="keywords" content="Basreng S2, basreng pedas daun jeruk, basreng balado, basreng pedas gurih, basreng original daun jeruk, basreng renyah, camilan gurih, UMKM basreng">
   <meta name="author" content="Basreng S2">
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Basreng S2 - Sekali Coba, Susah Berhenti!">
-  <meta property="og:description" content="Camilan bakso goreng super renyah dengan 5 pilihan varian rasa nikmat dan 3 pilihan kemasan (250gr, 500gr, 1kg). Pesan mudah via WhatsApp, Shopee & TikTok Shop.">
-  <meta property="og:image" content="img/foto5.jpeg">
-  <meta property="og:type" content="website">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://basrengs2.vercel.app/">
 
-  <title>Basreng S2 - Sekali Coba, Susah Berhenti! | Camilan Bakso Goreng Renyah</title>
+  <!-- Search Engine Robots -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:url" content="https://basrengs2.vercel.app/">
+  <meta property="og:site_name" content="Basreng S2">
+  <meta property="og:title" content="Basreng S2 | Camilan Bakso Goreng Renyah &amp; Gurih">
+  <meta property="og:description" content="Camilan bakso goreng super renyah Basreng S2 dengan 5 varian rasa gurih &amp; pedas daun jeruk. Tersedia ukuran 250g, 500g, 1kg. Sekali coba susah berhenti!">
+  <meta property="og:image" content="https://basrengs2.vercel.app/img/foto5.jpeg">
+  <meta property="og:image:secure_url" content="https://basrengs2.vercel.app/img/foto5.jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Lini Produk Camilan Basreng S2">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://basrengs2.vercel.app/">
+  <meta name="twitter:title" content="Basreng S2 | Camilan Bakso Goreng Renyah &amp; Gurih">
+  <meta name="twitter:description" content="Camilan bakso goreng super renyah Basreng S2 dengan 5 varian rasa gurih &amp; pedas daun jeruk. Tersedia ukuran 250g, 500g, 1kg.">
+  <meta name="twitter:image" content="https://basrengs2.vercel.app/img/foto5.jpeg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="img/favicon.png">
@@ -28,21 +50,50 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Basreng S2",
-    "url": "https://basrengs2.vercel.app/",
-    "logo": "https://basrengs2.vercel.app/img/logo.png",
-    "description": "Basreng S2 - Camilan bakso goreng super renyah dan gurih dengan 5 pilihan varian rasa favorit: Pedas Daun Jeruk, Original Daun Jeruk, Pedas Gurih, Balado, dan Original.",
-    "telephone": "+6283179640374",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer service",
-      "telephone": "+62-831-7964-0374",
-      "availableLanguage": "Indonesian"
-    },
-    "sameAs": [
-      "https://shopee.co.id/basrengs2",
-      "https://www.tiktok.com/@basrengs2"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://basrengs2.vercel.app/#organization",
+        "name": "Basreng S2",
+        "url": "https://basrengs2.vercel.app/",
+        "logo": "https://basrengs2.vercel.app/img/logo.png",
+        "description": "Basreng S2 - Camilan bakso goreng super renyah dan gurih dengan 5 pilihan varian rasa favorit: Pedas Daun Jeruk, Original Daun Jeruk, Pedas Gurih, Balado, dan Original.",
+        "telephone": "+6283179640374",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+62-831-7964-0374",
+          "availableLanguage": "Indonesian"
+        },
+        "sameAs": [
+          "https://shopee.co.id/basrengs2",
+          "https://www.tiktok.com/@basrengs2"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://basrengs2.vercel.app/#website",
+        "url": "https://basrengs2.vercel.app/",
+        "name": "Basreng S2",
+        "description": "Camilan bakso goreng super renyah dengan 5 varian rasa pilihan.",
+        "publisher": {
+          "@id": "https://basrengs2.vercel.app/#organization"
+        },
+        "inLanguage": "id-ID"
+      },
+      {
+        "@type": "Store",
+        "@id": "https://basrengs2.vercel.app/#store",
+        "name": "Basreng S2 Official",
+        "url": "https://basrengs2.vercel.app/",
+        "telephone": "+6283179640374",
+        "priceRange": "Rp 24.200 - Rp 77.000",
+        "image": "https://basrengs2.vercel.app/img/foto5.jpeg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "ID"
+        }
+      }
     ]
   }
   </script>
@@ -272,7 +323,7 @@
           <article class="product-card reveal-fade-up delay-100">
             <div class="product-media">
               <span class="product-badge badge-pedas">Best Seller 🔥</span>
-              <img src="img/pedasdaunjeruk.jpeg" alt="Basreng S2 Varian Pedas Daun Jeruk dalam mangkuk kayu" loading="lazy">
+              <img src="img/pedasdaunjeruk.jpeg" alt="Basreng S2 Varian Pedas Daun Jeruk dalam mangkuk kayu" width="400" height="400" loading="lazy">
             </div>
             <div class="product-body">
               <h3 class="product-title">Basreng Pedas Daun Jeruk</h3>
@@ -315,7 +366,7 @@
           <article class="product-card reveal-fade-up delay-200">
             <div class="product-media">
               <span class="product-badge badge-daunjeruk">Aroma Segar 🍃</span>
-              <img src="img/originaldaunjeruk.jpeg" alt="Basreng S2 Varian Original Daun Jeruk dalam mangkuk kayu" loading="lazy">
+              <img src="img/originaldaunjeruk.jpeg" alt="Basreng S2 Varian Original Daun Jeruk dalam mangkuk kayu" width="400" height="400" loading="lazy">
             </div>
             <div class="product-body">
               <h3 class="product-title">Basreng Original Daun Jeruk</h3>
@@ -358,7 +409,7 @@
           <article class="product-card reveal-fade-up delay-300">
             <div class="product-media">
               <span class="product-badge badge-pedas">Pedas Mantap 🌶️</span>
-              <img src="img/pedasgurih-dark.jpg" alt="Basreng S2 Varian Pedas Gurih dalam mangkuk kayu" loading="lazy">
+              <img src="img/pedasgurih-dark.jpg" alt="Basreng S2 Varian Pedas Gurih dalam mangkuk kayu" width="400" height="400" loading="lazy">
             </div>
             <div class="product-body">
               <h3 class="product-title">Basreng Pedas Gurih</h3>
@@ -401,7 +452,7 @@
           <article class="product-card reveal-fade-up delay-400">
             <div class="product-media">
               <span class="product-badge badge-balado">Bumbu Balado 🌶️✨</span>
-              <img src="img/balado-dark.jpg" alt="Basreng S2 Varian Balado dalam mangkuk kayu" loading="lazy">
+              <img src="img/balado-dark.jpg" alt="Basreng S2 Varian Balado dalam mangkuk kayu" width="400" height="400" loading="lazy">
             </div>
             <div class="product-body">
               <h3 class="product-title">Basreng Balado</h3>
@@ -444,7 +495,7 @@
           <article class="product-card reveal-fade-up delay-400">
             <div class="product-media">
               <span class="product-badge badge-original">Klasik Gurih ✨</span>
-              <img src="img/original.jpeg" alt="Basreng S2 Varian Original dalam mangkuk kayu" loading="lazy">
+              <img src="img/original.jpeg" alt="Basreng S2 Varian Original dalam mangkuk kayu" width="400" height="400" loading="lazy">
             </div>
             <div class="product-body">
               <h3 class="product-title">Basreng Original</h3>
@@ -539,10 +590,10 @@
             </div>
 
             <!-- Primary Photo (Bumbu melimpah dalam wajan) -->
-            <img class="about-image-primary" src="img/foto2.jpeg" alt="Basreng S2 saat dibumbui melimpah dalam wajan" loading="lazy">
+            <img class="about-image-primary" src="img/foto2.jpeg" alt="Basreng S2 saat dibumbui melimpah dalam wajan" width="520" height="440" loading="lazy">
             
             <!-- Secondary Photo (Kemasan standing pouch rapi) -->
-            <img class="about-image-secondary" src="img/foto1.jpeg" alt="Kemasan standing pouch Basreng S2 yang higienis" loading="lazy">
+            <img class="about-image-secondary" src="img/foto1.jpeg" alt="Kemasan standing pouch Basreng S2 yang higienis" width="340" height="250" loading="lazy">
           </div>
         </div>
       </div>
@@ -896,15 +947,15 @@
           <h4 class="footer-column-title">Saluran Resmi</h4>
           <div class="footer-contact-item">
             <span>💬</span>
-            <span>WhatsApp: <a href="https://wa.me/6283179640374" target="_blank" rel="noopener">0831-7964-0374</a></span>
+            <span>WhatsApp: <a href="https://wa.me/6283179640374" target="_blank" rel="noopener noreferrer">0831-7964-0374</a></span>
           </div>
           <div class="footer-contact-item">
             <span>🛍️</span>
-            <span>Shopee: <a href="https://shopee.co.id/basrengs2" target="_blank" rel="noopener">basrengs2</a></span>
+            <span>Shopee: <a href="https://shopee.co.id/basrengs2" target="_blank" rel="noopener noreferrer">basrengs2</a></span>
           </div>
           <div class="footer-contact-item">
             <span>🎵</span>
-            <span>TikTok Shop: <a href="https://www.tiktok.com/@basrengs2" target="_blank" rel="noopener">@basrengs2</a></span>
+            <span>TikTok Shop: <a href="https://www.tiktok.com/@basrengs2" target="_blank" rel="noopener noreferrer">@basrengs2</a></span>
           </div>
           <div style="margin-top: 16px;">
             <a href="#order" class="btn btn-primary btn-sm">Formulir Pesanan</a>
