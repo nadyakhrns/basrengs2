@@ -11,10 +11,6 @@ const CONFIG = {
   whatsappNumber: "6283179640374",
   whatsappDisplay: "0831-7964-0374",
   
-  // Tautan akun Instagram resmi
-  instagramUrl: "https://www.instagram.com/basrengs2.bandung/",
-  instagramDisplay: "@basrengs2.bandung",
-  
   // Tautan toko Shopee resmi
   shopeeUrl: "https://shopee.co.id/basrengs2",
   shopeeDisplay: "basrengs2",
@@ -569,7 +565,6 @@ window.selectVariantInForm = selectVariantInForm;
 // =============================================================================
 function initContactButtons() {
   const contactWaBtn = document.getElementById("btn-contact-wa");
-  const contactIgBtn = document.getElementById("btn-contact-ig");
   const contactShopeeBtn = document.getElementById("btn-contact-shopee");
   const contactTiktokBtn = document.getElementById("btn-contact-tiktok");
 
@@ -579,13 +574,6 @@ function initContactButtons() {
       const cleanNumber = CONFIG.whatsappNumber.replace(/[^0-9]/g, "");
       const text = encodeURIComponent(CONFIG.defaultGreeting);
       window.open(`https://wa.me/${cleanNumber}?text=${text}`, "_blank");
-    });
-  }
-
-  if (contactIgBtn) {
-    contactIgBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.open(CONFIG.instagramUrl, "_blank");
     });
   }
 
